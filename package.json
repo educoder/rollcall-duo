@@ -1,0 +1,24 @@
+{
+  "name": "rollcall-duo",
+  "version": "1.0.0",
+  "description": "Small rollcall layer in JS. Smaller than Rollcall 1.0 but enough for our needs at Encore Lab",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:educoder/rollcall-duo.git"
+  },
+  "keywords": [
+    "rollcall",
+    "encorelab",
+    "educoder"
+  ],
+  "author": "Armin Krauss <armin.krauss@utoronto.ca> (http://armin.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/educoder/rollcall-duo/issues"
+  },
+  "homepage": "https://github.com/educoder/rollcall-duo"
+}
