@@ -164,29 +164,29 @@ rollcall.group('leprechaun')
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty;
 
-  // if (typeof exports !== "undefined" && exports !== null) {
-  //   jQuery = require("jquery");
-  //   _ = require("underscore");
-  //   Backbone = require("backbone");
-  //   Backbone.$ = jQuery;
-  //   Drowsy = require("backbone.drowsy").Drowsy;
-  //   Skeletor = {};
-  //   exports.Skeletor = Skeletor;
-  // } else {
-  //   window.Skeletor = window.Skeletor || {};
-  //   Skeletor = window.Skeletor;
-  //   jQuery = window.$;
-  //   _ = window._;
-  //   Drowsy = window.Drowsy;
-  // }
+  if (typeof exports !== "undefined" && exports !== null) {
+    jQuery = require("jquery");
+    _ = require("underscore");
+    Backbone = require("backbone");
+    Backbone.$ = jQuery;
+    Drowsy = require("backbone.drowsy").Drowsy;
+    Skeletor = {};
+    exports.Skeletor = Skeletor;
+  } else {
+    window.Skeletor = window.Skeletor || {};
+    Skeletor = window.Skeletor;
+    jQuery = window.$;
+    _ = window._;
+    Drowsy = window.Drowsy;
+  }
 
-  jQuery = require("jquery");
-  _ = require("underscore");
-  Backbone = require("backbone");
-  Backbone.$ = jQuery;
-  Drowsy = require("backbone.drowsy").Drowsy;
-  Skeletor = {};
-  exports.Skeletor = Skeletor;
+  // jQuery = require("jquery");
+  // _ = require("underscore");
+  // Backbone = require("backbone");
+  // Backbone.$ = jQuery;
+  // Drowsy = require("backbone.drowsy").Drowsy;
+  // Skeletor = {};
+  // exports.Skeletor = Skeletor;
 
   // a Rollcall 2.0 client
   var Rollcall = function (url, db) {
