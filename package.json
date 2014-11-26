@@ -1,6 +1,6 @@
 {
   "name": "rollcall-duo",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Small rollcall layer in JS. Smaller than Rollcall 1.0 but enough for our needs at Encore Lab",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,14 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:educoder/rollcall-duo.git"
+  },
+  "dependencies": {
+    "backbone.drowsy" : "*"
+  },
+  "analyze": false,
+  "optionalDependencies": {
+  },
+  "devDependencies": {
   },
   "keywords": [
     "rollcall",

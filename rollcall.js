@@ -164,6 +164,8 @@ rollcall.group('leprechaun')
     __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
     __hasProp = {}.hasOwnProperty;
 
+  // This detects if we are in a browser or node.js environment and
+  // ensures dependencies are available in the required way
   if (typeof exports !== "undefined" && exports !== null) {
     jQuery = require("jquery");
     _ = require("underscore");
@@ -179,14 +181,6 @@ rollcall.group('leprechaun')
     _ = window._;
     Drowsy = window.Drowsy;
   }
-
-  // jQuery = require("jquery");
-  // _ = require("underscore");
-  // Backbone = require("backbone");
-  // Backbone.$ = jQuery;
-  // Drowsy = require("backbone.drowsy").Drowsy;
-  // Skeletor = {};
-  // exports.Skeletor = Skeletor;
 
   // a Rollcall 2.0 client
   var Rollcall = function (url, db) {
