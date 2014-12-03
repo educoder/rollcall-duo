@@ -176,24 +176,25 @@ rollcall.group('leprechaun')
   console.log(group.toJSON());
 });
 ```
-## Classes
+## Cohorts
+This was classes but can't use that since class is a reserved word in JS
 
-### Create a new class
+### Create a new cohort
 ```
-var newClass = new rollcall.Class({
+var newCohort = new rollcall.Cohort({
   "name": "ec101",
   "creator": "jslotta@gmail.com",
   "discussions": []
 });
-newClass.save();
+newCohort.save();
 ```
 
 ### Add discussion
 ```
-newClass.addDiscussion("53e915cf7e59cb607d099999002");
+newCohort.addDiscussion("53e915cf7e59cb607d099999002");
 ```
 
 ### Remove discussion
 ```
-newGrnewClassoup.removeDiscussion("53e915cf7e59cb607d099999002");
+newCohort.removeDiscussion("53e915cf7e59cb607d099999002");
 ```

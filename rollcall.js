@@ -130,6 +130,16 @@
       model: this.Cohort
     });
 
+    /*
+     *   Model for Discussions
+     */
+    this.Discussion = this.db.Document('discussions').extend({
+    });
+
+    this.Discussions = this.db.Collection('discussions').extend({
+      model: this.Discussion
+    });
+
   };
 
   Rollcall.prototype.users = function(selector) {
