@@ -124,7 +124,7 @@
 
     });
 
-    this.Users = this.db.Collection('classes').extend({
+    this.Classes = this.db.Collection('classes').extend({
       model: this.Class
     });
 
