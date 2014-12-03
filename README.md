@@ -183,7 +183,7 @@ rollcall.group('leprechaun')
 var newClass = new rollcall.Class({
   "name": "ec101",
   "creator": "jslotta@gmail.com",
-  "discussions: []
+  "discussions": []
 });
 newClass.save();
 ```

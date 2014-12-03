@@ -80,7 +80,9 @@
       model: this.User
     });
 
-    // Group model
+    /*
+     *   Group model
+     */
     this.Group = this.db.Document('groups').extend({
       addGroup: function (group) {
         var groups = _.clone(this.get('groups'));
@@ -102,13 +104,13 @@
     });
 
     /*
-     *   Model for Classes
+     *   Model for Cohorts
      */
-    this.Class = this.db.Document('classes').extend({
+    this.Cohort = this.db.Document('cohorts').extend({
       addDiscussion: function (discussionId) {
         var discussions = _.clone(this.get('discussions'));
 
-        // if no classes array exists add it
+        // if no discussions array exists add it
         if (!discussions) {
           discussions = [];
         }
@@ -124,8 +126,8 @@
 
     });
 
-    this.Classes = this.db.Collection('classes').extend({
-      model: this.Class
+    this.Cohorts = this.db.Collection('cohorts').extend({
+      model: this.Cohort
     });
 
   };
