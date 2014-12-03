@@ -154,6 +154,23 @@ rollcall.group('leprechaun')
   console.log(group.toJSON());
 });
 
+############ GROUPS ###################
+
+## Create a new group
+
+var newGroup = new rollcall.Group({
+  "name": "ec101",
+  "creator": "jslotta@gmail.com",
+  "discussions: []
+});
+newGroup.save();
+
+## Add discussion
+newGroup.addDiscussion("53e915cf7e59cb607d099999002");
+
+## Remove discussion
+newGroup.removeDiscussion("53e915cf7e59cb607d099999002");
+
 **/
 
 (function () {
@@ -254,6 +271,33 @@ rollcall.group('leprechaun')
 
     this.Runs = this.db.Collection('runs').extend({
       model: this.Run
+    });
+
+    /*
+     *   Model for Classes
+     */
+    this.Class = this.db.Document('classes').extend({
+      addDiscussion: function (discussionId) {
+        var discussions = _.clone(this.get('discussions'));
+
+        // if no classes array exists add it
+        if (discussions) {
+          discussions = [];
+        }
+
+        discussions.push(discussionId);
+        this.set('discussions', _.uniq(discussions));
+      },
+
+      removeDiscussion: function (discussionId) {
+        var discussions = this.get('discussions');
+        this.set('discussions', _.without(discussions, discussionId));
+      }
+
+    });
+
+    this.Users = this.db.Collection('classes').extend({
+      model: this.Class
     });
 
   };
