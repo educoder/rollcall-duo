@@ -154,22 +154,22 @@ rollcall.group('leprechaun')
   console.log(group.toJSON());
 });
 
-############ GROUPS ###################
+############ CLASSES ###################
 
-## Create a new group
+## Create a new class
 
-var newGroup = new rollcall.Group({
+var newClass = new rollcall.Class({
   "name": "ec101",
   "creator": "jslotta@gmail.com",
   "discussions: []
 });
-newGroup.save();
+newClass.save();
 
 ## Add discussion
-newGroup.addDiscussion("53e915cf7e59cb607d099999002");
+newClass.addDiscussion("53e915cf7e59cb607d099999002");
 
 ## Remove discussion
-newGroup.removeDiscussion("53e915cf7e59cb607d099999002");
+newGrnewClassoup.removeDiscussion("53e915cf7e59cb607d099999002");
 
 **/
 
