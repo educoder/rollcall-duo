@@ -1,6 +1,6 @@
 {
   "name": "rollcall-duo",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Small rollcall layer in JS. Smaller than Rollcall 1.0 but enough for our needs at Encore Lab",
   "main": "index.js",
   "scripts": {

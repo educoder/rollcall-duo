@@ -277,6 +277,22 @@
     });
   };
 
+  Rollcall.prototype.selectFromCollection = function(selector, collectionName) {
+    selector = selector || {};
+
+    var collection = new this[collectionName]();
+    var promise = collection.fetch({
+      data: {
+        selector: JSON.stringify(selector),
+        strict: false
+      }
+    });
+
+    return promise.then(function () {
+      return collection;
+    });
+  };
+
   this.Rollcall = Rollcall;
 
 }).call(this);
