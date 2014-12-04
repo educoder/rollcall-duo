@@ -51,20 +51,20 @@
         this.set('tags', _.without(tags, tag));
       },
 
-      addClass: function (c) {
-        var classes = _.clone(this.get('classes'));
-        // if no classes array exists add it
-        if (!classes) {
-          classes = [];
+      addCohort: function (c) {
+        var classes = _.clone(this.get('cohorts'));
+        // if no cohorts array exists add it
+        if (!cohorts) {
+          cohorts = [];
         }
 
-        classes.push(c);
-        this.set('classes', _.uniq(classes));
+        cohorts.push(c);
+        this.set('cohorts', _.uniq(cohorts));
       },
 
-      removeClass: function (c) {
-        var classes = this.get('classes');
-        this.set('classes', _.without(classes, c));
+      removeCohort: function (c) {
+        var cohorts = this.get('cohorts');
+        this.set('cohorts', _.without(cohorts, c));
       },
 
       isTeacher: function() {
